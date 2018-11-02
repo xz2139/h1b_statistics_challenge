@@ -20,7 +20,7 @@ data = []
 try:
     with open(data_file,encoding="utf-8") as f:
         for line in f:
-            data.append(line.split(';'))
+            data.append(line.strip('\n').split(';'))
 except:
     print('Error with Input file')
     sys.exit()
@@ -71,7 +71,7 @@ def top10_certified(data, subject, outputfile):
     # Create a list and populate each by list [occupations/states, number of certified case in each, percent in total]
     output=[]
     for key, value in sorted_list[:10]:
-        percent=float(round(value*100/(total_count)))
+        percent=float(round(value*100/(total_count),1))
         output.append([key, str(value),str(percent)+'%'])
     
     # Add headers to the list
