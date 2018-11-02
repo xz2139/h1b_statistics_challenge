@@ -1,6 +1,7 @@
 # H1b_Statistics_Challenge
 
-This is part of Insight Data Challenge 
+This is part of Insight Data Challenge. 
+
 See more in https://github.com/InsightDataScience/h1b_statistics
 
 1. [Problem](README.md#problem)
