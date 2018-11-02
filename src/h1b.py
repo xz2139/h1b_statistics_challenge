@@ -76,14 +76,16 @@ def top10_certified(data, subject, outputfile):
     
     # Add headers to the list
     if subject=='job':
-        output_whead=[['TOP_OCCUPATIONS','NUMBER_CERTIFIED_APPLICATIONS','PERCENTAGE']]+output
+        header=[['TOP_OCCUPATIONS','NUMBER_CERTIFIED_APPLICATIONS','PERCENTAGE']]
     else:
-        output_whead=[['TOP_STATES','NUMBER_CERTIFIED_APPLICATIONS','PERCENTAGE']]+output
+        header=[['TOP_STATES','NUMBER_CERTIFIED_APPLICATIONS','PERCENTAGE']]
     
     # Write it to a semicolon seperated file
-    with open(outputfile, 'w') as filehandle:  
-        for item in output_whead:
-            filehandle.write(";".join(item)+'\n')
+    with open(outputfile, 'w') as f:  
+        for item in header:
+            f.write(";".join(item)+'\n')
+        for item in output:
+            f.write(";".join(item)+'\n')
 
 # Execute function seperately for Occupations and States
 top10_certified(data, subject='job', outputfile=job_name)
