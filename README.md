@@ -26,5 +26,7 @@ The last three steps are written into a function called `top10_certified`. The f
 
 To run the script, just put the input file in folder `input`, call `./run.sh` from terminal, and the script will generate output file 
 `top_10_occupations.txt` and `top_10_states.txt` in `output` folder.
+Note: Python should be at version 3.0 or higher in order to run successfully
 
 To test on sample test case, run `./run_tests.sh` from `insight_testsuite` folder.
+
