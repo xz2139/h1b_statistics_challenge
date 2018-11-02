@@ -12,14 +12,15 @@ This problem is creating a mechanism to analyze past years data, specificially c
 
 # Approach
 
-I approach this problem using Python 3. The solution only contain 1 python script named **h1b.py**, and the only package it used is the default `sys` package. The data struacture used are mainly lists and dictionary.
+I approach this problem using Python 3. The solution only contain 1 python script named **h1b.py**, and the only package it used is the default `sys` package. 
 
-First, I load data. Then I get the index for h1b status, state and occupations. This is for slicing data in a easier way.
-Then I created counter using list to count the number of certified case within each category.
-Further, I convert the counter into a list and sort by the number of certified case in decreasing order.
-At the end I choose the top 10 in the list and write them into files in desired format.
+1. Load data to list of lists. 
+2. Parse out header and get the index for h1b status, state and occupations.
+3. Create counter using list to count the number of certified case within each occupations/states.
+4. Convert the counter into a list and sort by the number of certified case and alphabetic names in decreasing order. 
+5. Choose the top 10 in the list and write them into files in desired format.
 
-The last three steps are written into a function. The function takes argument of the subject name we want to count. Hence at the end of script, I called the function 2 times seperately for occupations and states to create output files. 
+The last three steps are written into a function called `top10_certified`. The function takes argument of the subject name we want to count. And at the end of script, I called this function 2 times seperately for occupations and states to create output files. 
 
 # Instructions 
 
